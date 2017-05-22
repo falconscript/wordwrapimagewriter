@@ -1,0 +1,26 @@
+{
+  "name": "wordwrapimagewriter",
+  "private": false,
+  "version": "1.0.0",
+  "description": "ES6 JS class to write text onto image with word wrapping",
+  "keywords": [
+    "node-gd",
+    "gd",
+    "libgd",
+    "word",
+    "wrap",
+    "wordwrap",
+    "word wrap",
+    "wordwrapimagewriter",
+    "image",
+    "text",
+    "image text writer"
+  ],
+  "dependencies": {
+    "node-gd": "^1.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/falconscript/wordwrapimagewriter"
+  }
+}
