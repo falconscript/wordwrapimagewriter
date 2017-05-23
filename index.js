@@ -115,7 +115,7 @@ var process = require('process'),
        if (startX + expectedWidth < rBoundaryX) {
          break;
        } else if (times++ > 400) {
-         console.log("[!] WWIW LOOP ERR! MESSAGE WON'T FIT!!? ", text) || process.exit(1);
+         console.log("[!] WWIW LOOP ERR! MESSAGE WON'T FIT!!? ", text, "WORDS:", words) || process.exit(1);
        }
 
        // Check if rightmost word fits AN ENTIRE LINE at all, ignoring startX
@@ -124,8 +124,13 @@ var process = require('process'),
 
        if (rightmostWordWidth > this.lineLength || bigwordchararr.length) { // !isFirstLine &&
          // This one word and can't fit. Pull a character off it
-         bigwordchararr.unshift(rightmostWord.slice(-1));
-         words[words.length - 1] = rightmostWord.substr(0, rightmostWord.length - 1);
+         if (rightmostWord) {
+           bigwordchararr.unshift(rightmostWord.slice(-1));
+           words[words.length - 1] = rightmostWord.substr(0, rightmostWord.length - 1);
+         } else {
+           // word has no more characters. need to move on to next word, was pushed to wontfit
+           words.pop();
+         }
        } else {
          // pull a word off of it
          wordsThatWontFit.unshift(words.pop());

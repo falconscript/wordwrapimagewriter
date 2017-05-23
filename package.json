@@ -1,7 +1,7 @@
 {
   "name": "wordwrapimagewriter",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ES6 JS class to write text onto image with word wrapping",
   "keywords": [
     "node-gd",
