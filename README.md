@@ -36,7 +36,7 @@ writer.openImg(() => {
   var textThatWontFit = writer.writeText(usernameText, usernameColor);
 
   if (textThatWontFit) {
-    console.log("[!] Text couldn't fit:", comment.username);
+    console.log("[!] Text couldn't fit:", textThatWontFit);
   }
 
   // Change font or size. Changing size will automatically update lineLength
